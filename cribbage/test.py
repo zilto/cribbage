@@ -1,6 +1,6 @@
 import unittest
 
-from game_classes import Card, Deck, Hand, Player
+from card_objects import Card, Deck, Scoresheet, Player
 
 
 PHAND1: list[Card] = [Card(1, 0), Card(9, 2), Card(3, 0), Card(3, 1)]
@@ -12,8 +12,8 @@ CUT2: Card = Card(7, 0)
 
 class TestHandScoring(unittest.TestCase):
     def setUp(self):
-        self.testhand1 = Hand(PHAND1, CUT1)
-        self.testhand2 = Hand(PHAND2, CUT2)
+        self.testhand1 = Scoresheet(PHAND1, CUT1)
+        self.testhand2 = Scoresheet(PHAND2, CUT2)
 
     def test_scoring(self):
         # self.assertEqual(self.testhand1.get_score(), 6, self.testhand1)
